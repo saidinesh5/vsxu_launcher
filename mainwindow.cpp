@@ -65,7 +65,7 @@ void MainWindow::onLaunchClicked()
     }
 
     QStringList args;
-    args << QString("-s %1x%2").arg(QString::number(ui->widthSpinBox->value())).arg(QString::number(ui->heightSpinBox->value()));
+    args << "-s" << QString("%1x%2").arg(QString::number(ui->widthSpinBox->value())).arg(QString::number(ui->heightSpinBox->value()));
     if(ui->fullscreenCheckBox->isChecked())
         args << "-f";
 
